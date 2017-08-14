@@ -1,7 +1,7 @@
-var IMG_EXPANDED  = 'Expanded.png';
-var IMG_COLLAPSED = 'Collapsed.png';
-var IMG_BLANK = 'blank.png';
-var IMG_LEAF = 'LeafRowHandle.png';
+var IMG_EXPANDED  = 'assets/img/Expanded.png';
+var IMG_COLLAPSED = 'assets/img/Collapsed.png';
+var IMG_BLANK = 'assets/img/blank.png';
+var IMG_LEAF = 'assets/img/LeafRowHandle.png';
 
 new Image(9,9),src = IMG_EXPANDED; // caching
 new Image(9,9),src = IMG_COLLAPSED; // caching
@@ -12,7 +12,7 @@ function hover(iNode, over) {
 
     if (over) {
         t = document.getElementById(iNode).alt;
-        
+
         if (t == '*') {
             document.getElementById(iNode).src=IMG_LEAF;
         } else if (t == 'V') {
@@ -20,7 +20,7 @@ function hover(iNode, over) {
         } else {
             document.getElementById(iNode).src=IMG_COLLAPSED;
         }
-    
+
     } else {
         document.getElementById(iNode).src=IMG_BLANK;
     }
@@ -86,7 +86,7 @@ function expandAll() {
         nodeList = document.getElementsByTagName('div');
 
         for (var i = 0; i < nodeList.length; i++) {
-    
+
             if (nodeList.item(i).className == 'expanded' || nodeList.item(i).className == 'collapsed') {
                 expand(nodeList.item(i).id);
             }
@@ -104,9 +104,9 @@ function collapseAll() {
         nodeList = document.getElementsByTagName('div');
 
         for (var i = 0; i < nodeList.length; i++) {
-    
+
             if (nodeList.item(i).className == 'expanded' || nodeList.item(i).className == 'collapsed') {
-                collapse(nodeList.item(i).id);  
+                collapse(nodeList.item(i).id);
             }
         }
     }
