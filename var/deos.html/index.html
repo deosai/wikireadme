@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title></title>
+<script type="text/javascript" src="outliner.js"></script><style type="text/css">
+                        
+                        body {
+                        -webkit-text-size-adjust:none;
+                        }
+			
+                        img.status {
+                        margin-left: 2px; margin-right: 2px; margin-top: 2px; height: 11px; width: 11px;
+                        }
+                        
+                        img.checkbox-column {
+                        height: 11px; width: 11px; vertical-align: top; margin-top: 3px;
+                        }
+                        
+                        img.leaf {
+                        margin-left: 3px; margin-right:3px; margin-top: 2px; margin-bottom: 3px; height: 6px; width 6px;
+                        }
+                        
+                        img.parent {
+                        margin-left: 3px; margin-right:3px; margin-top: 2px; height: 10px; width: 10px;
+                        }
+			
+			th {
+			vertical-align: bottom;
+			
+			}
+			
+			td {
+			vertical-align: top;
+			}
+			
+			td,th {
+			border-bottom: 1px solid rgba(0,0,0,0.05) ;  
+			empty-cells: show;
+			}
+			
+			.top-right-border {
+			border-top: 1px solid rgba(0,0,0,0.05) ;  
+			}
+			
+			.no-border {
+			border-bottom: 0px;
+			border-left: 0px;
+			}
+			
+			
+			
+			
+			table {
+			
+			font-family: Helvetica, sans-serif;
+			font-size: 12px;
+			font-family: "Optima", sans-serif;  font-size: 13px;			
+			
+			}
+
+			
+			
+			.wholeDocument {
+			color:rgb(83,83,83) ;  font-family: "Optima", sans-serif;  font-size: 13px;background-color:rgb(255,255,255) ;  
+	
+			}
+		
+			
+			td.subcell {
+			border: none;
+			}
+			
+			td.content {
+			padding-left: 4px;
+			padding-bottom: 2px;
+			padding-top: 1px;
+			padding-right: 3px;
+			}
+			
+			.full {
+			height: 100%;
+			}
+			
+			.heighthack {
+                        
+                            height: 29px;
+                            
+			}
+			
+			div.titlepadding { 
+			padding-right:3px;
+			padding-left:6px;
+			padding-bottom:3px;
+			padding-top: 2px;
+			}
+			
+			
+					.summary_node {
+						background: rgba(0,0,0,.12);
+						margin-bottom: 1px;
+					}
+				
+			
+			div.column {   
+			padding-right: 3px;
+			padding-left: 4px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			margin-right: 1px;
+			}
+			
+			.labelpadding {
+			padding-right: 3px;
+			padding-top: 1px;
+			padding-left: 2px;
+			}
+			
+			.indicator {
+			white-space: nowrap;
+			text-align:right;
+			margin-right: 0px;
+			vertical-align: top;
+			padding-top: 1px;
+			padding-left: 0px;
+			}
+			
+			.wholedocgutter {
+			
+			}
+			
+			div.row {
+			}
+			
+			div.headerRow {
+			}
+			
+			.expanded {
+			display: block;
+			}
+			.collapsed {
+			display: none;
+			}
+			
+            div.palette-hit-zone {
+                position: fixed;
+                bottom: 0px;
+				height: 33%;
+                left:50%;
+                width: 66%;
+                margin-left: -33%;
+            }
+
+			div.floating-palette {
+                -webkit-border-radius: 5px;
+                -webkit-transition: opacity is fade-in-out;
+                -webkit-transition-duration: 1s;
+				background-color: rgb(64, 64, 64);
+                opacity:0.7;
+				width: 88px;
+				height: 44px;
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                margin-left: -44px;
+			}
+            
+            div.palette-cell {
+                opacity:1;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                position: absolute;
+                height: 32px;
+                width: 32px;
+            }
+            
+            div.cell-divider {
+                position: absolute;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                margin-left: 44px;
+                height: 32px;
+                width:0px;
+                position:absolute;
+                left:0px;
+                border-right:rgb(207, 207, 207) 2px solid;
+            }
+			
+			
+			
+			
+			.note { 
+			padding-left: 5px;
+			padding-right: 3px; 
+			border: none; 
+			color:rgb(128,128,128) ;  font-style: italic;font-style: italic;
+			}
+                        
+                        .note-bg {
+                        
+                        }
+			
+			/* Total table width is 1244
+			Adjusted table width is 1318 */
+			
+			.wholething {
+				width: auto;
+			}
+			
+			
+			table.row {
+				
+						width: 1244px;
+						
+			
+			}
+			
+			
+    .col_width1 { 
+        width: 1244px;  /* Actual width is 1244 */
+    }
+
+    .col1 { 
+        
+    }
+
+    .colbackground1 { 
+        
+    }
+
+			
+			/* Level Styles */
+			
+			
+    .columntitle { 
+        
+    }
+
+    .level1 { 
+        color:rgb(138,42,140) ;  font-family: "Baskerville", sans-serif;  font-size: 32px;
+    }
+
+    .levelcolor1 { 
+        background-color:rgba(138,42,140,0.15) ;  
+    }
+
+    .levelguttercolor1 { 
+        
+    }
+
+    .level2 { 
+        color:rgb(17,123,140) ;  font-family: "Baskerville", sans-serif;  font-size: 24px;
+    }
+
+    .levelcolor2 { 
+        background-color:rgba(17,123,140,0.15) ;  
+    }
+
+    .levelguttercolor2 { 
+        
+    }
+
+    .level3 { 
+        font-family: "Baskerville", sans-serif;  font-style: italic;font-size: 16px;
+    }
+
+    .levelcolor3 { 
+        background-color:rgba(126,126,126,0.12) ;  
+    }
+
+    .levelguttercolor3 { 
+        
+    }
+
+    .ns-esaGNHoovYO-Vermilion { 
+        color:rgb(140,42,42) ;  }
+
+    .ns-iiDYggGaunu-Ultramarine { 
+        color:rgb(74,78,202) ;  }
+
+    .ns-g0MTwSIvHLI-Malachite { 
+        color:rgb(50,138,78) ;  }
+
+    .ns-hzc-jeI75P5-Ochre { 
+        color:rgb(174,127,20) ;  }
+
+    .ns-eiUz6IBsQl4-Kohl { 
+        color:rgb(0,0,0) ;  }
+
+    .ns-bg-esaGNHoovYO-Vermilion { 
+        }
+
+    .ns-bg-iiDYggGaunu-Ultramarine { 
+        }
+
+    .ns-bg-g0MTwSIvHLI-Malachite { 
+        }
+
+    .ns-bg-hzc-jeI75P5-Ochre { 
+        }
+
+    .ns-bg-eiUz6IBsQl4-Kohl { 
+        }
+
+    .ns-gutter-esaGNHoovYO-Vermilion { 
+        }
+
+    .ns-gutter-iiDYggGaunu-Ultramarine { 
+        }
+
+    .ns-gutter-g0MTwSIvHLI-Malachite { 
+        }
+
+    .ns-gutter-hzc-jeI75P5-Ochre { 
+        }
+
+    .ns-gutter-eiUz6IBsQl4-Kohl { 
+        }
+</style>
+</head>
+<body class="wholeDocument"><table cellspacing="0" cellpadding="0" class="top-right-border"><tr><td class="wholething no-border">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="piSkdArSmHf"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('ppiSkdArSmHf', event.shiftKey)" id="ipiSkdArSmHf" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1" style=" width: 1px; "></td>
+<td class=" content level1 subcell">Definition of Terms<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="ppiSkdArSmHf" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr id="gv8gXn2xbx8"><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Backpropagation<br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level2 levelcolor2"><div class=" full"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 25px;" class="note-bg subcell"></td>
+<td class="note-bg subcell" style="width: 15px;"></td>
+<td class="note-bg subcell labelpadding level2" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class="note subcell">Is a method used in artificial neural networks to calculate the error contribution of each neuron after a batch of data is processed.<br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr id="dHg3Uy6BVTy"><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Bitcoin<br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level2 levelcolor2"><div class=" full"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 25px;" class="note-bg subcell"></td>
+<td class="note-bg subcell" style="width: 15px;"></td>
+<td class="note-bg subcell labelpadding level2" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class="note subcell">A decentralized timestamp / messaging protocol that when implemented / stable results in a value storage system (C-like pointers for PoW).<br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="js3V-_XD8W4"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Cellular Automation<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="p4upH7sb7S1"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Collective Unconscious<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr id="gdYbRq0VY0a"><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Dunbar’s Number<br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level2 levelcolor2"><div class=" full"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 25px;" class="note-bg subcell"></td>
+<td class="note-bg subcell" style="width: 15px;"></td>
+<td class="note-bg subcell labelpadding level2" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class="note subcell">The suggested cognitive limit to the number of people with whom one can maintain stable social relationships.<br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr id="iBAdL8nhYzr"><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Flux<br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level2 levelcolor2"><div class=" full"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 25px;" class="note-bg subcell"></td>
+<td class="note-bg subcell" style="width: 15px;"></td>
+<td class="note-bg subcell labelpadding level2" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class="note subcell">The word flux comes from Latin: fluxus means “flow”, and flier is “to flow”.<br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="gVH7oeXJ4LI"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img onmousedown="ioSwitch('pgVH7oeXJ4LI', event.shiftKey)" id="igVH7oeXJ4LI" border="0" alt="&gt;" class="parent" src="Collapsed.png" title="expand"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Maslow’s Hierarchy of Needs<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pgVH7oeXJ4LI" class="collapsed">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="dO67h5QFGv6"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">1. Physiological Needs<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="kC7ZhHRn99S"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">2. Safety Needs<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="efpCusM5ORT"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">3. Social Belonging<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="mdIZb2J7TOz"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">4. Esteem<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="nGPsxjMbwLs"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">5. Self-Actualization<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr id="phWLlkiMU8_"><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3" style=" width: 1px; "></td>
+<td class=" content level3 subcell">6. Self-Transcendence<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr id="dQJui-B4FYs"><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Quantum Entanglement<br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level2 levelcolor2"><div class=" full"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 25px;" class="note-bg subcell"></td>
+<td class="note-bg subcell" style="width: 15px;"></td>
+<td class="note-bg subcell labelpadding level2" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class="note subcell">A physical phenomenon that occurs when pairs or groups of particles are generated or interact in ways such that the quantum state of each particle cannot be described independently of the others, even when the particles are separated by a large distance—instead, a quantum state must be described for the system as a whole. <br>
+</td>
+</tr></table></div></td></tr>
+</table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+<tr id="hjQ6F9dzGAY"><td class=" col1 colbackground1 col_width1" style="border-bottom: none;"><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; "></td>
+<td class=" content level2 subcell">Self-Actualization<br>
+</td>
+</tr></table></div></td></tr>
+<tr><td class=" level2 levelcolor2"><div class=" full"><table border="0" cellspacing="0" cellpadding="0" style="width:100%"><tr>
+<td style="width: 25px;" class="note-bg subcell"></td>
+<td class="note-bg subcell" style="width: 15px;"></td>
+<td class="note-bg subcell labelpadding level2" style=" color: rgba(0,0,0,0); width: 1px; "></td>
+<td class="note subcell">Becoming the best person that one can possibly strive for in the service of both the self and others.<br>
+</td>
+</tr></table></div></td></tr>
+</table>
+</div>
+</td></tr></table></body>
+</html>
