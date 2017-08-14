@@ -18,20 +18,20 @@ img.checkbox-column {
 }
 
 img.leaf {
-  margin-left: 3px;
-  margin-right: 3px;
-  margin-top: 2px;
+  margin-left: 44px;
+  margin-right: 30px;
+  margin-top: 6px;
   margin-bottom: 3px;
-  height: 6px;
-  width 6px;
+  height: 12px;
+  width 12px;
 }
 
 img.parent {
-  margin-left: 3px;
-  margin-right: 3px;
-  margin-top: 2px;
-  height: 10px;
-  width: 10px;
+  margin-left: 10px;
+  margin-right: 30px;
+  margin-top: 8px;
+  height: 15px;
+  width: 15px;
 }
 
 th {
@@ -44,7 +44,7 @@ td {
 
 td,
 th {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 0px solid rgba(0, 0, 0, 0.05);
   empty-cells: show;
 }
 
@@ -62,19 +62,20 @@ th {
 
 table {
 
-  font-family: Helvetica, sans-serif;
-  font-size: 12px;
-  font-family: "Optima", sans-serif;
-  font-size: 13px;
+  font-family: Ubuntu, sans-serif;
+  font-size: 11px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  font-color:#fff;
 }
 
 
 
 .wholeDocument {
-  color: rgb(83, 83, 83);
-  font-family: "Optima", sans-serif;
-  font-size: 13px;
-  background-color: rgb(255, 255, 255);
+  color: #f5f5f5;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  background-color: rgb(0, 0, 0);
 }
 
 
@@ -83,10 +84,10 @@ td.subcell {
 }
 
 td.content {
-  padding-left: 4px;
-  padding-bottom: 2px;
-  padding-top: 1px;
-  padding-right: 3px;
+  padding-left: 0px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 10px;
 }
 
 .full {
@@ -107,7 +108,7 @@ div.titlepadding {
 
 
 .summary_node {
-  background: rgba(0, 0, 0, .12);
+  background: rgba(0, 0, 0, .0.2);
   margin-bottom: 1px;
 }
 
@@ -121,9 +122,9 @@ div.column {
 }
 
 .labelpadding {
-  padding-right: 3px;
-  padding-top: 1px;
-  padding-left: 2px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .indicator {
@@ -131,7 +132,7 @@ div.column {
   text-align: right;
   margin-right: 0px;
   vertical-align: top;
-  padding-top: 1px;
+  padding-top: 20px;
   padding-left: 0px;
 }
 
@@ -197,12 +198,13 @@ div.cell-divider {
 
 
 .note {
-  padding-left: 5px;
-  padding-right: 3px;
+  padding-left: 71px;
+  padding-right: 30px;
   border: none;
-  color: rgb(128, 128, 128);
-  font-style: italic;
-  font-style: italic;
+  color: rgba(256, 256, 256, 1);
+  font-style: normal;
+  letter-spacing:.6px;
+  font-style: normal;
 }
 
 .note-bg {}
@@ -237,37 +239,38 @@ table.row {
 .columntitle {}
 
 .level1 {
-  color: rgb(138, 42, 140);
-  font-family: "Baskerville", sans-serif;
+  color: rgb(255, 255, 255);
+  font-family: "Ubuntu", sans-serif;
   font-size: 32px;
 }
 
 .levelcolor1 {
-  background-color: rgba(138, 42, 140, 0.15);
+  background-color: rgba(138, 42, 140, 0);
 }
 
 .levelguttercolor1 {}
 
 .level2 {
-  color: rgb(17, 123, 140);
-  font-family: "Baskerville", sans-serif;
+  color: rgb(0, 174, 240);
+  font-family: "Ubuntu", sans-serif;
   font-size: 24px;
 }
 
 .levelcolor2 {
-  background-color: rgba(17, 123, 140, 0.15);
+  background-color: rgba(17, 123, 140, 0);
 }
 
 .levelguttercolor2 {}
 
 .level3 {
-  font-family: "Baskerville", sans-serif;
-  font-style: italic;
-  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing:.4px
 }
 
 .levelcolor3 {
-  background-color: rgba(126, 126, 126, 0.12);
+  background-color: rgba(126, 126, 126, 0);
 }
 
 .levelguttercolor3 {}
